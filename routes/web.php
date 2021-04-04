@@ -1,7 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Mymeal;
+use App\Models\customer;
+use App\Models\category;
+use App\Models\order;
+use App\Models\contact;
+use App\Models\reciepe;
+// use App\Http\Controllers\ItemsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +23,24 @@ Route::get('home', function () {
     return view('backend.layout.master');
 });
 
+Route::resource('backend/meals','MymealController' );
+
+Route::resource('backend/customers','CustomerController' );
+
+Route::resource('backend/categories','CategoryController' );
+
+Route::resource('backend/orders','OrderController' );
+
+Route::resource('backend/contacts','ContactController' );
+
+Route::resource('backend/reciepes','ReciepeController' );
+
 Auth::routes();
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
