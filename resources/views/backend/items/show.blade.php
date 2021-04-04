@@ -33,11 +33,10 @@
         
     </div>
     </div>
-  
-  <!-- </div> -->
+
 
 <div class="row mt-5 mb-5">
-  <!-- <div style="width: 650px; height: 600px; margin-left:  140px;"> -->
+ 
 <div class="col-lg-6">
     <h2>DIRECTION</h2>
 
