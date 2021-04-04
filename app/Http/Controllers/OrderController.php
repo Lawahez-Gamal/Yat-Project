@@ -53,7 +53,7 @@ class OrderController extends Controller
  
      $neworder->status=$req->status;
 
-     $neworder->menu_id=1;
+     $neworder->meal_id=1;
      
      $neworder->save();
  
@@ -98,7 +98,7 @@ class OrderController extends Controller
         $req-> validate([
 
             'time'=>'required',
-            'status'=>'required',
+            'status'=>'',
         ]);
 
            $order=order::find($id);
@@ -107,7 +107,7 @@ class OrderController extends Controller
         
             $order->status=$req->status;
 
-            $order->menu_id=1;
+            $order->meal_id=1;
 
             $order->save();
 

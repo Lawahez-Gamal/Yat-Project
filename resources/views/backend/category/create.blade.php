@@ -3,7 +3,7 @@
 @section("content")
 <div class="row">
               <div class="col-md-6 col-sm-12 offset-3 text-center">
-                  <h1 class="text-uppercase font-weight-bolder my-title">Recipies</h1>
+                  <h1 class="text-uppercase font-weight-bolder my-title">Menus</h1>
                   <p class="font-weight-bold">Tomato is a delisious restaurant website template</p>
               </div>
           </div>
@@ -12,11 +12,11 @@
 
 <section class="container my-5">
 
-<form method="post" action="{{route('meals.store')}}" enctype="multipart/form-data">
+<form method="post" action="{{route('categories.store')}}" enctype="multipart/form-data">
 @csrf
   <div class="form-group">
-    <label for="exampleInputEmail1">Meal name</label>
-    <input type="text" name="name" class="form-control"  placeholder="Enter meal name">
+    <label for="exampleInputEmail1">categories name</label>
+    <input type="text" name="name" class="form-control"  placeholder="Enter categories name">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Description</label>

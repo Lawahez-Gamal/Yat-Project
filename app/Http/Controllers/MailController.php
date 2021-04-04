@@ -26,7 +26,7 @@ class MailController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.contact.create');
     }
 
     /**
@@ -61,7 +61,7 @@ class MailController extends Controller
     {
 
     $mail=mail::find($id);
-
+    return view("backend.contact.show",compact('contact'));
     }
 
     /**
@@ -70,9 +70,11 @@ class MailController extends Controller
      * @param  \App\Models\mail  $mail
      * @return \Illuminate\Http\Response
      */
-    public function edit(mail $mail)
+    public function edit($id)
     {
-        //
+        $mail=mail::find($id);
+
+        return view("backend.contact.edit",compact('contact'));
     }
 
     /**
@@ -84,7 +86,17 @@ class MailController extends Controller
      */
     public function update(Request $request, mail $mail)
     {
-        //
+        $newmail=new mail();
+
+        $request-> validate([
+                'mail'=>'required',
+                ]);
+                
+                $newmail->email=$request->mail;
+            
+            
+                $newmail->save();
+                return redirect(route('frontend.mail'))->with('status','Success'); 
     }
 
     /**
@@ -93,8 +105,10 @@ class MailController extends Controller
      * @param  \App\Models\mail  $mail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(mail $mail)
+    public function destroy($id)
     {
-        //
+        $mail=mail::find($id);
+        $mail->delete();
+        return redirect(route('contacts.index'))->with('status','Record has been deleted');
     }
 }

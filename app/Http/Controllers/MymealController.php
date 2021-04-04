@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mymeal;
+use App\Models\reciepe;
 use Illuminate\Http\Request;
 
 class MymealController extends Controller
@@ -86,11 +87,10 @@ class MymealController extends Controller
     public function show($id)
     {
         $Mymeal=Mymeal::find($id);
-       
-        // $user= Mymeal::find($id)->user;
+        $reciepe=Mymeal::find($id)->reciepe;
   
-        return view("backend.items.show",compact('Mymeal'));
-        // return view("backend.items.show",compact('Mymeal','user'));
+        return view("backend.items.show",compact('Mymeal','reciepe'));
+        
     }
 
     /**

@@ -81,6 +81,28 @@
     display: inline-block;
   }
 
+  .dot2 {
+    padding:0px 5px 0px 5px;
+    width: 50px;
+    text-align:center;
+    background-color: orange;
+    border-radius: 50%;
+  }
+
+
+  progress::-moz-progress-bar { background: rgb(248, 197, 102) ; }
+progress::-webkit-progress-value { background: rgb(248, 197, 102) ; }
+progress { background: rgb(248, 197, 102) ; }
+  
+#bar {
+    width: 75%;
+    height: .5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
   .span-checked{
       background-color: blueviolet;
   }

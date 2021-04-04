@@ -49,7 +49,8 @@ class ReciepeController extends Controller
             'name'=>'required',
             'ingredient'=>'required',
             'instructions'=>'required',
-           
+             'protien'=>'required',
+              'fat'=>'required',		'carbohydrates'=>'required',	'calory'=>'required',		'choleste'=>'required'
         ]);
      
      $newreciepe->name=$req->name;
@@ -58,7 +59,17 @@ class ReciepeController extends Controller
  
      $newreciepe->instructions=$req->instructions;
 
-     $newreciepe->menu_id=1;
+     $newreciepe->protien=$req->protien;
+
+     $newreciepe->fat=$req->fat;
+
+     $newreciepe->carbohydrates=$req->carbohydrates;
+
+     $newreciepe->calory=$req->calory;
+
+     $newreciepe->choleste=$req->choleste;
+
+     $newreciepe->meal_id=5;
 
      $newreciepe->save();
  
@@ -105,6 +116,8 @@ class ReciepeController extends Controller
             'name'=>'required',
             'ingredient'=>'required',
             'instructions'=>'required',
+             'protien'=>'required',
+              'fat'=>'required',		'carbohydrates'=>'required',	'calory'=>'required',		'choleste'=>'required'
            
         ]);
     
@@ -115,8 +128,23 @@ class ReciepeController extends Controller
             $newreciepe->ingredient=$req->ingredient;
         
             $newreciepe->instructions=$req->instructions;
+            $newreciepe->name=$req->name;
+ 
+            $newreciepe->ingredient=$req->ingredient;
+        
+            $newreciepe->instructions=$req->instructions;
+       
+            $newreciepe->protien=$req->protien;
+       
+            $newreciepe->fat=$req->fat;
+       
+            $newreciepe->carbohydrates=$req->carbohydrates;
+       
+            $newreciepe->calory=$req->calory;
+       
+            $newreciepe->choleste=$req->choleste;
 
-            $newreciepe->menu_id=1;
+            $newreciepe->meal_id=5;
     
             $reciepe->save();
 

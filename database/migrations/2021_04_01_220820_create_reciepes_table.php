@@ -18,7 +18,17 @@ class CreateReciepesTable extends Migration
             $table->string('reciepe_name');
             $table->text('ingredient');
             $table->text('instructions');
-           
+       
+            $table->text('protien');
+       
+            $table->text('fat');
+       
+            $table->text('carbohydrates');
+       
+            $table->text('calory');
+       
+            $table->text('choleste');
+            
             $table->unsignedBigInteger('meal_id');
 
             $table->foreign('meal_id')->references('id')->on('Mymeals');
