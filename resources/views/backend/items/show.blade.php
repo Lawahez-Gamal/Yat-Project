@@ -21,38 +21,48 @@
         <h2 class="text-uppercase text-nowrap font-weight-bold">
         {{$Mymeal->name}}</h2>
        
-        <h3>Description :</h3>
-
-        <div class="col-lg-6">
-        <p >{{$Mymeal->description}}</p>
-       </div>
-        
-        <h3>Ingredients : </h3>
-        <div class="card w-75 ">
-        <label class="container">
+      <div class="card w-75">
+        <h4 style="margin-left: 30px;">INGREDIENTS</h4>
+       <label class="container" style="margin-left: 30px;">
         <input type="checkbox" checked="checked">
         <span class="checkmark">
         {{$reciepe->ingredient}}
         </span>
-        
       </label>
-      </div>
+      
+        
+    </div>
+    </div>
+  
+  <!-- </div> -->
 
-      <div class="row mt-5 mb-5">
+<div class="row mt-5 mb-5">
+  <!-- <div style="width: 650px; height: 600px; margin-left:  140px;"> -->
+<div class="col-lg-6">
+    <h2>DIRECTION</h2>
 
-       <div class="col-lg-6">
-        <h3 class="mt-5">DIRECTION : </h3>
-        <div class="col-lg-1">
+  <div class="row">
+
+      <div class="col-lg-1">
        <span class="dot2">1</span>
       </div>
-      <div class="col-lg-11">
-        {{$reciepe->instructions}}
-      </div>
-     </div>
-<div class="col-lg-6">
-    <div class="row mt-3">
-      <div class="col-lg-6">
-        <h3>Nutrion :</h3>
+     <div class="col-lg-11">
+    <p >{{$reciepe->instructions}}</p>
+    </div>
+  
+  
+  </div>
+  </div>
+ 
+    <div class="col-lg-6">
+    <h3>DESCRIPTIONS</h3>
+    <p class="text-align-justify">{{$Mymeal->description}}</p>
+    
+    <h3>NUTRITION</h3>
+    
+    <div class="row" style="margin-left: 5px;">
+      <div class="col-lg-4">
+        <h5>Nutrient</h5>
         
         <h6>Protien</h6>
        
@@ -64,17 +74,33 @@
         
         <h6>Cholesterol</h6>
       </div>
-       
-      <div class="col-lg-4 mt-2">
+      <div class="col-lg-4">
         <h5>DV</h5>
+        
         <h6>{{$reciepe->protien}} gr</h6>
         <h6>{{$reciepe->fat}} gr</h6>
         <h6>{{$reciepe->carbohydrates}} gr</h6>
         <h6>{{$reciepe->calory}} gr</h6>
         <h6>{{$reciepe->choleste}} kcal</h6>
-        </div>
       </div>
-    </div>  
+
+      <div class="col-lg-4">
+        <h5>%DV</h5>
+      
+        <h6>5% <progress class="ml-2" id="bar" value="32" max="100"> </progress></h6>
+       
+        <h6>6%<progress class="ml-2" id="bar" value="50" max="100"> </progress></h6>
+      
+        <h6>9%<progress class="ml-2" id="bar" value="90" max="100"> </progress></h6>
+    
+        <h6>2%<progress class="ml-2" id="bar" value="20" max="100"> </progress></h6>
+        
+        <h6>8%<progress class="ml-2" id="bar" value="70" max="100"> </progress></h6>
+      </div>
+    </div>
+  </div>
+</div> 
+
 
 </div>
 </section>
