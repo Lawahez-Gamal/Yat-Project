@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Http\req;
 use App\Models\Mymeal;
 use App\Models\customer;
 use App\Models\category;
 use App\Models\order;
 use App\Models\contact;
+use App\Models\mail;
 use App\Models\reciepe;
 // use App\Http\Controllers\ItemsController;
 /*
@@ -25,6 +28,8 @@ Route::get('home', function () {
 
 Route::resource('backend/meals','MymealController' );
 
+Route::resource('backend/reciepes','ReciepeController' );
+
 Route::resource('backend/customers','CustomerController' );
 
 Route::resource('backend/menus','CategoryController' );
@@ -33,7 +38,7 @@ Route::resource('backend/orders','OrderController' );
 
 Route::resource('backend/contacts','ContactController' );
 
-Route::resource('backend/reciepes','ReciepeController' );
+Route::resource('backend/mail','MailController' );
 
 Route::resource('backend/home','HomeController' );
 

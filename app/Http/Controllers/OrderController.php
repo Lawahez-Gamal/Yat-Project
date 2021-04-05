@@ -46,12 +46,12 @@ class OrderController extends Controller
         $req-> validate([
 
             'time'=>'required',
-            'status'=>'required',
+            'status'=>'',
         ]);
 
      $neworder->time=$req->time;
  
-     $neworder->status=$req->status;
+     $neworder->status="default";
 
      $neworder->meal_id=1;
      
@@ -105,7 +105,7 @@ class OrderController extends Controller
            
             $order->time=$req->time;
         
-            $order->status=$req->status;
+            $order->status="Default";
 
             $order->meal_id=1;
 

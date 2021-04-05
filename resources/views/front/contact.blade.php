@@ -38,15 +38,31 @@
                 <i class="fas fa-envelope text-warning"></i>
             </div>
             </div>
+
         <div class="col-md-6 py-3">
-          <div class="form-group ">
-            <input class="form-control" type="text" name=" name" id="name" placeholder="Full Name" style="background-color: rgb(211, 216, 221);border: none;"><br></div>
-          <div  class="form-group ">  <input class="form-control" type="email" name="company" placeholder="Email Address" style="background-color: rgb(211, 216, 221);border: none;" required><br></div>  
-         <input class="form-control"  type="text" name="tel" placeholder="subject" style="background-color: rgb(211, 216, 221);height: 50px;border: none;" ><br>
-         <textarea class="form-control"   name="tel" placeholder="Message" style="background-color: rgb(211, 216, 221);height: 150px;border: none;" ></textarea>
-         <br>
-       
-      <input class="form-control py-2"  type="submit" value="SEND Message" style="background-color:rgb(252, 193, 84);border: none;" >
+      <form method="post" class="contact" action="{{route('contacts.store')}}" enctype="multipart/form-data">
+   @csrf
+  <div class="form-group">
+    <label for="exampleInputEmail1">Full name</label>
+    <input type="text" class="form-control " name="name" class="form-control"  placeholder="Enter Full name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Email</label>
+    <input type="email" class="form-control" name="email" class="form-control"  placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Subject</label>
+    <input type="text" class="form-control" name="subject" class="form-control"  placeholder="Enter subject">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Message</label>
+    <textarea type="text" class="form-control" name="message" class="form-control"  placeholder="Enter message"></textarea>
+  </div>
+
+  <button type="submit" class="form-control py-2"  type="submit" >SEND Message</button>
+</form>
+     
   </div>
 </div>
 </div>

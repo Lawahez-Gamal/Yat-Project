@@ -27,9 +27,11 @@
         <p >{{$Mymeal->description}}</p>
         <a href="{{route('meals.show',$Mymeal->id)}}" class="btn text-uppercase border border-none p-3 mb-5 text-white my-btn">view details</a>
         
+     
+
         </div>
-        <hr> 
-@endforeach
+      
+        @endforeach
 
 </div>
 

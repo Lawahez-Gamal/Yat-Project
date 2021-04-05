@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\contact;
-use Illuminate\Http\req;
+use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
@@ -41,7 +41,7 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\req  $req
      * @return \Illuminate\Http\Response
      */
-    public function store(req $req)
+    public function store(Request $req)
     {
         $newcontact=new contact();
 
@@ -61,7 +61,7 @@ class ContactController extends Controller
      
            $newcontact->save();
 
-           return redirect(route('contacts.show',$newcontact->id))->with('status','Data inserted Successfully'); 
+           return redirect(route('contacts.index',$newcontact->id))->with('status','Data inserted Successfully'); 
     }
 
     /**
@@ -97,25 +97,26 @@ class ContactController extends Controller
      * @param  \App\Models\contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(req $req, $id)
+    public function update($req, $id)
     {
         $req-> validate([
             'name'=>'required',
             'email'=>'required',
+            'message'=>'required',
             'subject'=>'required | max:300',
             ]);
  
             $contact=contact::find($id);
 
-            $newcontact->full_name=$req->name;
+            $contact->name=$req->name;
  
-            $newcontact->email=$req->email;
+            $contact->email=$req->email;
  
-            $newcontact->message=$req->message;
+            $contact->message=$req->message;
  
-            $newcontact->subject=$req->subject;
+            $contact->subject=$req->subject;
       
-            $newcontact->save();
+            $contact->save();
  
             return redirect(route('contacts.index'))->with('status','Data inserted Successfully');
     }

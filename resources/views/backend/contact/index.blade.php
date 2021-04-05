@@ -2,20 +2,10 @@
 
 @section("content")
 
-{{--if user logged in means @auth--}}
 @auth 
  welcome {{ Auth::user()->name }}
 
- {{-- This is comment
- app.blade line 54
- This brings the record from user if i need email {{ Auth::user()->name }}
- if i need id:
-    {{ Auth::user()->email }}
-    --}}
-
 @endauth
-
-{{--if user NOT logged in means @auth--}}
 
 @guest
   welcome geust
@@ -23,7 +13,7 @@
 
 <div class="row">
               <div class="col-md-6 col-sm-12 offset-3 text-center">
-                  <h1 class="text-uppercase font-weight-bolder my-title">Recipies</h1>
+                  <h1 class="text-uppercase font-weight-bolder my-title">Contacts</h1>
                   <p class="font-weight-bold">Tomato is a delisious restaurant website template</p>
               </div>
           </div>
@@ -31,7 +21,7 @@
     </header>
 <section class="container mt-5">
 
-<a class="btn btn-primary" href="{{route('menus.create')}}" >Add menu</a>
+<a class="btn btn-primary" href="{{route('contacts.create')}}" >Add contact</a>
 <table class="table">
 <tr>
 <th>id</th>
@@ -41,16 +31,17 @@
 <th></th>
 </tr>
 
-@foreach($menus as $menu)
+@foreach($contacts as $contact)
 
 <tr>
-    <td> {{$menu->id}} </td>
-    <td> {{$menu->name}}</td>
-    <td>{{$menu->description}}</td>
-    <td>{{$menu->image}}</td>
-    <td><a href="{{route('menus.show',$menu->id)}}">show</a>
-    <a href="{{route('menus.edit',$menu->id)}}" class="btn btn-primary">edit</a>
-   <form action="{{route('menus.destroy',$menu->id)}}" method="post" style="display:inline">
+    <td> {{$contact->id}} </td>
+    <td> {{$contact->name}}</td>
+    <td>{{$contact->message}}</td>
+    <td>{{$contact->subject}}</td>
+    
+    <td><a href="{{route('contacts.show',$contact->id)}}">show</a>
+    <a href="{{route('contacts.edit',$contact->id)}}" class="btn btn-primary">edit</a>
+   <form action="{{route('contacts.destroy',$contact->id)}}" method="post" style="display:inline">
       @csrf @method("delete")
     <input type="submit" class="btn btn-danger" value="Delete">
     </form>
@@ -65,22 +56,22 @@
 
 <div class="row">
       
-       @foreach($menus as $menu)
+       @foreach($contacts as $contact)
        <div class="col-md-6 col-sm-12">
        
-        <h2 class="text-uppercase text-nowrap font-weight-bold">{{$menu->name}}</h2>
+        <h2 class="text-uppercase text-nowrap font-weight-bold">{{$contact->name}}</h2>
         <span class="fa fa-star"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
-        <p >{{$menu->description}}</p>
+        <p >{{$contact->description}}</p>
 
-        <a href="{{route('meals.show',$menu->id)}}">view details</a>
+        <a href="{{route('meals.show',$contact->id)}}">view details</a>
 
-        <a href="{{route('meals.edit',$menu->id)}}" class="btn btn-primary">edit</a>
+        <a href="{{route('meals.edit',$contact->id)}}" class="btn btn-primary">edit</a>
 
-      <form action="{{route('meals.destroy',$menu->id)}}" method="post" style="display:inline">
+      <form action="{{route('meals.destroy',$contact->id)}}" method="post" style="display:inline">
 
       @csrf @method("delete")
 

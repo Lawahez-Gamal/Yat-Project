@@ -229,3 +229,16 @@ button{
     font-size: 20px;
     margin-bottom: 20px;
 }
+
+.contact input{
+    background-color: rgb(211, 216, 221);
+    height: 50px;
+    border: none;
+}
+
+.contact textarea{
+    background-color: rgb(211, 216, 221);
+    height: 150px;
+    border: none
+}
+

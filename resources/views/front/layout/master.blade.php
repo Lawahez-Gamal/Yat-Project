@@ -34,44 +34,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto mx-5">
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="home.html" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    HOME
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="home.html">home</a>
-                  </div>
+              
+                    <a class="nav-link" href="{{route('home.index')}}">home</a>
+                 
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    MENU
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="menu.html">menu</a>
+               
+                    <a class="nav-link" href="{{route('menus.index')}}">menu</a>
     
-                  </div>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    RESERVATION
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{route('orders.index')}}">RESERVATION</a>
+                  
+                    <a class="nav-link" href="{{route('orders.index')}}">RESERVATION</a>
     
-                  </div>
                 </li>
 
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    RECIPE
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="">RECIPE</a>
+                
+                    <a class="nav-link" href="{{route('reciepes.index')}}">RECIPE</a>
     
-                  </div>
                 </li>
     
                 <li class="nav-item dropdown">
@@ -80,31 +61,26 @@
                     PAGES
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  
+                <a class="dropdown-item" href="{{route('home.index')}}">home</a>
                 <a class="dropdown-item" href="{{route('meals.index')}}">Meals</a>
+                <a class="dropdown-item" href="{{route('reciepes.index')}}">RECIPE</a>
+                <a class="dropdown-item" href="{{route('orders.index')}}">RESERVATION</a>
+                <a class="dropdown-item" href="{{route('menus.index')}}">menu</a>
+                
                   </div>
                 </li>
     
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    PLOG
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="home.html">PLOG</a>
+                  
+                    <a class="nav-link" href="{{route('home.index')}}">PLOG</a>
     
-                  </div>
+                 
                 </li>
     
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    SHOP
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="home.html">SHOP</a>
+                  
+                    <a class="nav-link" href="{{route('home.index')}}">SHOP</a>
     
-                  </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('contacts.index')}}">CONTACT</a>
@@ -196,9 +172,10 @@
           <p class="my-3">Get updates about new dishes and upcoming events</p>
         </div>
         <div class="col-md-4 col-sm-6 offset-7">
-          <form>
-            <input type="text" class="p-2 w-75" placeholder="Your Email Address">
-            <button class="p-2 m-3 border border-0 font-weight-bolder text-white my-btn">></button>
+        <form method="post" action="{{route('mail.store')}}" enctype="multipart/form-data">
+          @csrf
+            <input type="text" class="p-2 w-75" placeholder="Your Email Address" name="mail">
+            <button class=" p-2 m-3 border border-0 font-weight-bolder text-white my-btn">></button>
           </form>
         </div>
       </div>

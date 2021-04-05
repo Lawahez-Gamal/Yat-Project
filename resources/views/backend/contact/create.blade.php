@@ -3,7 +3,7 @@
 @section("content")
 <div class="row">
               <div class="col-md-6 col-sm-12 offset-3 text-center">
-                  <h1 class="text-uppercase font-weight-bolder my-title">Recipies</h1>
+                  <h1 class="text-uppercase font-weight-bolder my-title">Contacts</h1>
                   <p class="font-weight-bold">Tomato is a delisious restaurant website template</p>
               </div>
           </div>
@@ -12,19 +12,24 @@
 
 <section class="container my-5">
 
-<form method="post" action="{{route('meals.store')}}" enctype="multipart/form-data">
+<form method="post" action="{{route('contacts.store')}}" enctype="multipart/form-data">
 @csrf
   <div class="form-group">
-    <label for="exampleInputEmail1">Meal name</label>
-    <input type="text" name="name" class="form-control"  placeholder="Enter meal name">
+    <label for="exampleInputEmail1">Full name</label>
+    <input type="text" name="name" class="form-control"  placeholder="Enter Full name">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Description</label>
-    <input type="text" name="description" class="form-control"  placeholder="Enter description">
+    <label for="exampleInputPassword1">email</label>
+    <input type="email" name="email" class="form-control"  placeholder="Enter email">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Add image</label>
-    <input type="file" name="img" class="form-control">
+    <label for="exampleInputPassword1">subject</label>
+    <input type="text" name="subject" class="form-control"  placeholder="Enter subject">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">message</label>
+    <input type="text" name="message" class="form-control"  placeholder="Enter message">
   </div>
 
   <button type="submit" class="btn btn-primary">Add </button>

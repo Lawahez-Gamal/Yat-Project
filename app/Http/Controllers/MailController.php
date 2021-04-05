@@ -16,7 +16,7 @@ class MailController extends Controller
     {
         $mail=mail::all();
         $count=mail::count();
-        return view ('backend.mail',compact('mail','count'));
+        return view ('front.mail',compact('mail','count'));
     }
 
     /**
@@ -32,23 +32,23 @@ class MailController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\req  $req
      * @return \Illuminate\Http\Response
      */
-      public function store(Request $request)
+      public function store(request $req)
         {
         // new object from room model
         $newmail=new mail();
 
-        $request-> validate([
+        $req-> validate([
                 'mail'=>'required',
                 ]);
                 
-                $newmail->email=$request->mail;
+                $newmail->email=$req->mail;
             
             
                 $newmail->save();
-                return redirect(route('frontend.mail'))->with('status','Success'); 
+                return redirect(route('contacts.index'))->with('status','Success'); 
         }
 
     /**
@@ -80,23 +80,23 @@ class MailController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\req  $req
      * @param  \App\Models\mail  $mail
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, mail $mail)
+    public function update($req, $id)
     {
         $newmail=new mail();
 
-        $request-> validate([
+        $req-> validate([
                 'mail'=>'required',
                 ]);
                 
-                $newmail->email=$request->mail;
+                $newmail->email=$req->mail;
             
             
                 $newmail->save();
-                return redirect(route('frontend.mail'))->with('status','Success'); 
+                return redirect(route('contacts.index'))->with('status','Success'); 
     }
 
     /**
