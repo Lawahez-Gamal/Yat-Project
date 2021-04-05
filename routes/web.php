@@ -27,13 +27,15 @@ Route::resource('backend/meals','MymealController' );
 
 Route::resource('backend/customers','CustomerController' );
 
-Route::resource('backend/categories','CategoryController' );
+Route::resource('backend/menus','CategoryController' );
 
 Route::resource('backend/orders','OrderController' );
 
 Route::resource('backend/contacts','ContactController' );
 
 Route::resource('backend/reciepes','ReciepeController' );
+
+Route::resource('backend/home','HomeController' );
 
 Auth::routes();
 

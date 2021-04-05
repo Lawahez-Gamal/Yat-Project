@@ -2,7 +2,13 @@
 @extends ("front.layout.master")
 
 @section("content")
-
+<div class="row">
+    <div class="col-md-6 col-sm-12 offset-3 text-center">
+      <h1 class="text-uppercase font-weight-bolder">Home</h1>
+      
+    </div>
+  </div>
+  </header>
   <section class="restaurant container pt-3 ">
 
 
@@ -10,9 +16,9 @@
     <p class="text-center py-3">alittle about us anf a breif history of how we start</p>
     <div class="row">
       <div class="col-md-5">
-        <img src="./images/meal3.jpg" class="w-45">
-        <img src="./images/meal2.jpg" class="w-45">
-        <img src="./images/meal6.jpg" class="w-99 mt-1">
+        <img src="{{asset('./images/meal3.jpg')}}" class="w-45">
+        <img src="{{asset('./images/meal2.jpg')}}" class="w-45">
+        <img src="{{asset('./images/meal6.jpg')}}" class="w-99 mt-1">
 
 
       </div>
@@ -60,7 +66,7 @@
             <div class="row">
 
               <div class="col-md-6">
-                <img class="d-block w-100" src="./images/bg2.png" alt="First slide">
+                <img class="d-block w-100" src="{{asset('./images/bg2.png')}}" alt="First slide">
               </div>
               <div class="col-md-6">
                 <p>
@@ -85,7 +91,7 @@
             <div class="row">
 
               <div class="col-md-6">
-                <img class="d-block w-100" src="./images/bg2.png" alt="First slide">
+                <img class="d-block w-100" src="{{asset('./images/bg2.png')}}" alt="First slide">
               </div>
               <div class="col-md-6">
                 <p>
@@ -109,7 +115,7 @@
             <div class="row">
 
               <div class="col-md-6">
-                <img class="d-block w-100" src="./images/bg2.png" alt="First slide">
+                <img class="d-block w-100" src="{{asset('./images/bg2.png')}}" alt="First slide">
               </div>
               <div class="col-md-6">
                 <p>
@@ -250,7 +256,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card">
-            <img class="card-img-top" src="./images/meal5.jpg" alt="Card image cap">
+            <img class="card-img-top" src="{{asset('./images/meal5.jpg')}}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">serving with love</h5>
               <p class="card-text"> It was popularised in the 1960s with the release of Letraset sheets
@@ -265,7 +271,7 @@
 
         <div class="col-md-4">
           <div class="card">
-            <img class="card-img-top" src="./images/meal5.jpg" alt="Card image cap">
+            <img class="card-img-top" src="{{asset('./images/meal5.jpg')}}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">serving with love</h5>
               <p class="card-text"> It was popularised in the 1960s with the release of Letraset sheets
@@ -280,7 +286,7 @@
 
         <div class="col-md-4">
           <div class="card">
-            <img class="card-img-top" src="./images/meal6.jpg" alt="Card image cap">
+            <img class="card-img-top" src="{{asset('./images/meal6.jpg')}}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">serving with love</h5>
               <p class="card-text"> It was popularised in the 1960s with the release of Letraset sheets

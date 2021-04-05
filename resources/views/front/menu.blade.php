@@ -3,7 +3,14 @@
 @section("content")
     
 
-
+<div class="row">
+              <div class="col-md-6 col-sm-12 offset-3 text-center">
+                  <h1 class="text-uppercase font-weight-bolder my-title">Menu</h1>
+                  <p class="font-weight-bold">Tomato is a delisious restaurant website template</p>
+              </div>
+          </div>
+        </div>
+    </header>
 
 <section class="menu pt-5">
 
@@ -43,21 +50,21 @@
 <div class="row  py-5">
   <div class="col-md-4">
     <div class="card">
-      <img class="card-img-top" src="./images/meal5.jpg" alt="Card image cap">
+      <img class="card-img-top" src="{{asset('./images/meal5.jpg')}}" alt="Card image cap">
       <div class="card-body">
         </div>
     </div>
   </div>
     <div class="col-md-4">
       <div class="card">
-        <img class="card-img-top" src="./images/meal6.jpg" alt="Card image cap">
+        <img class="card-img-top" src="{{asset('./images/meal6.jpg')}}" alt="Card image cap">
         <div class="card-body">
         </div>
       </div>
       </div>
       <div class="col-md-4">
         <div class="card">
-          <img class="card-img-top" src="./images/meal2.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{{asset('./images/meal2.jpg')}}" alt="Card image cap">
           <div class="card-body">
           </div>
         </div>
@@ -67,7 +74,7 @@
 <div class="row  pb-5 ">
   <div class="col-md-4">
     <div class="card">
-      <img class="card-img-top" src="./images/meal4.jpg" alt="Card image cap">
+      <img class="card-img-top" src="{{asset('./images/meal4.jpg')}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title text-center">serving with love</h5>
         <p class="card-text text-center" >                It was popularised in the 1960s with the release of Letraset sheets 
@@ -80,7 +87,7 @@
   </div>
   <div class="col-md-4">
     <div class="card">
-      <img class="card-img-top" src="./images/meal2.jpg" alt="Card image cap">
+      <img class="card-img-top" src="{{asset('./images/meal2.jpg')}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title text-center">serving with love</h5>
         <p class="card-text text-center" >                It was popularised in the 1960s with the release of Letraset sheets 
@@ -94,7 +101,7 @@
 
   <div class="col-md-4">
     <div class="card">
-      <img class="card-img-top" src="./images/meal3.jpg" alt="Card image cap">
+      <img class="card-img-top" src="{{asset('./images/meal3.jpg')}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title text-center">serving with love</h5>
         <p class="card-text text-center" >                It was popularised in the 1960s with the release of Letraset sheets 
@@ -118,20 +125,6 @@
    </div>
   </section>
 
-  <section class="container-fluid subscribe p-3">
-    <div class="row">
-      <div class="col-md-9">
-        <span class="text-uppercase float-left mx-5">subscribe</span>
-
-        <p class="my-3">Get updates about new dishes and upcoming events</p>
-      </div>
-      <div class="col-md-4 col-sm-6 offset-7">
-        <form>
-          <input type="text" class="p-2 w-75" placeholder="Your Email Address">
-          <button class="p-2 m-3 border border-0 font-weight-bolder text-white my-btn">></button>
-        </form>
-      </div>
-    </div>
-  </section>
+  
 
   @endsection

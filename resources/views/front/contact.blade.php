@@ -4,10 +4,15 @@
 
 @section("content")
 
-<div>
-  <h1 class="text-center align-middle font-weight-bold pt-5 text-info  " >CONTACT US</h1>
-  <h5 class="text-center align-middle ">Tomato is a delicious restuaran website template</h3>
-</div>
+<div class="row">
+        <div class="col-md-6 col-sm-12 offset-3 text-center">
+          <h1 class="text-center align-middle font-weight-bold pt-5 text-info  " >CONTACT US</h1>
+  <p class="font-weight-bold">Tomato is a delicious restuaran website template</p>
+          
+        </div>
+      </div>
+    
+  </header>
 
     <div class="container " style="margin-top:40px ;" >
       <div class="row ">

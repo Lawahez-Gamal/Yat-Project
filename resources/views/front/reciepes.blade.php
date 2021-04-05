@@ -13,11 +13,11 @@
     <div class="container mt-5 mb-5">
     <div class="row">
       <div class="col-md-4">
-      <img src="images/13.jpg" class="h-100" >
+      <img src="{{asset('images/13.jpg')}}" class="h-100" >
     </div>
     
        <div class="col-md-7 ml-5 w-75">
-       <h1 >{{$reciepe->name}} </h1>
+       <h1 > </h1>
        <p class="text-align-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit, amet consectetur adipisicing elit.
           Reprehenderit distinctio Lorem ipsum dolor sit  adipisicing elit.adipisicing elit.
           Reprehenderit distinctio Lorem ipsum dolor sit  adipisicing elit.
@@ -187,7 +187,7 @@
     
     <div class="col-md-3 col-sm-12">
       <div class="card border border-0">
-        <img src="images/14.jpg" class="card-img-top my-img" alt="recipe-image">
+        <img src="{{asset('images/14.jpg')}}" class="card-img-top my-img" alt="recipe-image">
         <div class="mt-3">
           <h6 class="card-title text-uppercase">food name</h6>
           
@@ -198,7 +198,7 @@
     
     <div class="col-md-3 col-sm-12">
       <div class="card border border-0">
-        <img src="images/33.jpg" class="card-img-top my-img" alt="recipe-image">
+        <img src="{{asset('images/33.jpg')}}" class="card-img-top my-img" alt="recipe-image">
         <div class="mt-3">
           <h6 class="card-title text-uppercase">food name</h6>
           
@@ -208,7 +208,7 @@
   
     <div class="col-md-3 col-sm-12">
       <div class="card border border-0">
-        <img src="images/14.jpg" class="card-img-top my-img" alt="recipe-image">
+        <img src="{{asset('images/14.jpg')}}" class="card-img-top my-img" alt="recipe-image">
         <div class="mt-3">
           <h6 class="card-title text-uppercase">food name</h6>
           
@@ -219,7 +219,7 @@
     
     <div class="col-md-3 col-sm-12">
       <div class="card border border-0">
-        <img src="images/33.jpg" class="card-img-top my-img" alt="recipe-image">
+        <img src="{{asset('images/33.jpg')}}" class="card-img-top my-img" alt="recipe-image">
         <div class="mt-3">
           <h6 class="card-title text-uppercase">food name</h6>
           
